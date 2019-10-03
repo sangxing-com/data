@@ -1,0 +1,6 @@
+spring:
+  data:
+    mongodb:
+      uri: mongodb://root:100527@134.175.199.68:27017/finance
+logging:
+  config: classpath:log4j2.yml
