@@ -1,7 +1,7 @@
 package com.cst.finance.service;
 
-import com.cst.finance.dao.EntBalanceDao;
-import com.cst.finance.entity.EntBalance;
+import com.cst.finance.dao.EntImportDataDao;
+import com.cst.finance.entity.EntImportData;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.data.mongodb.core.query.Criteria;
@@ -11,21 +11,21 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
-public class EntBalanceServiceImpl implements EntBalanceService {
+public class EntImportDataServiceImpl implements EntImportDataService {
 
     @Autowired
-    EntBalanceDao entBalanceDao;
+    EntImportDataDao entImportDataDao;
 
     @Autowired
     MongoTemplate mongoTemplate;
 
     @Override
-    public int addEntBalances(List<EntBalance> entBalances) {
-        try {
-            if(entBalances.size()>0){
-                delEntBalances(entBalances.get(0).getSysEntAccountBookDetID());
+    public int addEntImportDatas(List<EntImportData> entImportDatas) {
+        try{
+            if(entImportDatas.size()>0){
+                delEntImportDatas(entImportDatas.get(0).getSysEntAccountBookDetID());
             }
-            mongoTemplate.insertAll(entBalances);
+            mongoTemplate.insertAll(entImportDatas);
             return 1;
         }catch (Exception ce){
             return 0;
@@ -33,17 +33,16 @@ public class EntBalanceServiceImpl implements EntBalanceService {
     }
 
     @Override
-    public int delEntBalances(String SysEntAccountBookDetID) {
+    public int delEntImportDatas(String SysEntAccountBookDetID) {
         try{
             Query query=new Query();
             Criteria criteria=new Criteria();
             criteria.and("SysEntAccountBookDetID").is(SysEntAccountBookDetID);
             query.addCriteria(criteria);
-            mongoTemplate.remove(query,EntBalance.class);
-            return 1;
+            mongoTemplate.remove(query,EntImportData.class);
         }catch (Exception ce){
             return 0;
         }
+        return 0;
     }
-
 }

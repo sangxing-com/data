@@ -1,7 +1,7 @@
 package com.cst.finance.service;
 
-import com.cst.finance.dao.EntBalanceDao;
-import com.cst.finance.entity.EntBalance;
+import com.cst.finance.dao.EntProfitDao;
+import com.cst.finance.entity.EntProfit;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.data.mongodb.core.query.Criteria;
@@ -11,21 +11,21 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
-public class EntBalanceServiceImpl implements EntBalanceService {
+public class EntProfitServiceImpl implements EntProfitService {
 
     @Autowired
-    EntBalanceDao entBalanceDao;
+    EntProfitDao entProfitDao;
 
     @Autowired
     MongoTemplate mongoTemplate;
 
     @Override
-    public int addEntBalances(List<EntBalance> entBalances) {
-        try {
-            if(entBalances.size()>0){
-                delEntBalances(entBalances.get(0).getSysEntAccountBookDetID());
+    public int addEntProfits(List<EntProfit> entProfits) {
+        try{
+            if(entProfits.size()>0){
+                delEntProfits(entProfits.get(0).getSysEntAccountBookDetID());
             }
-            mongoTemplate.insertAll(entBalances);
+            mongoTemplate.insertAll(entProfits);
             return 1;
         }catch (Exception ce){
             return 0;
@@ -33,17 +33,16 @@ public class EntBalanceServiceImpl implements EntBalanceService {
     }
 
     @Override
-    public int delEntBalances(String SysEntAccountBookDetID) {
-        try{
+    public int delEntProfits(String SysEntAccountBookDetID) {
+        try {
             Query query=new Query();
             Criteria criteria=new Criteria();
             criteria.and("SysEntAccountBookDetID").is(SysEntAccountBookDetID);
             query.addCriteria(criteria);
-            mongoTemplate.remove(query,EntBalance.class);
+            mongoTemplate.remove(query,EntProfit.class);
             return 1;
         }catch (Exception ce){
             return 0;
         }
     }
-
 }

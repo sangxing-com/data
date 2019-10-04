@@ -1,21 +1,21 @@
-2019-10-04 00:46:46.432 - INFO  [           main] o.s.b.StartupInfoLogger        : Starting FinanceApplication on DESKTOP-4N7PR7S with PID 3532 (C:\Project\GitData\data\target\classes started by yuanzhifeng in C:\Project\GitData\data)
-2019-10-04 00:46:46.448 - INFO  [           main] o.s.b.SpringApplication        : No active profile set, falling back to default profiles: default
-2019-10-04 00:46:46.848 - INFO  [           main] epositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
-2019-10-04 00:46:46.908 - INFO  [           main] epositoryConfigurationDelegate : Finished Spring Data repository scanning in 55ms. Found 3 repository interfaces.
-2019-10-04 00:46:47.234 - INFO  [           main] o.s.b.w.e.t.TomcatWebServer    : Tomcat initialized with port(s): 8080 (http)
-2019-10-04 00:46:47.254 - INFO  [           main] o.a.j.l.DirectJDKLog           : Initializing ProtocolHandler ["http-nio-8080"]
-2019-10-04 00:46:47.260 - INFO  [           main] o.a.j.l.DirectJDKLog           : Starting service [Tomcat]
-2019-10-04 00:46:47.261 - INFO  [           main] o.a.j.l.DirectJDKLog           : Starting Servlet engine: [Apache Tomcat/9.0.24]
-2019-10-04 00:46:47.339 - INFO  [           main] o.a.j.l.DirectJDKLog           : Initializing Spring embedded WebApplicationContext
-2019-10-04 00:46:47.340 - INFO  [           main] letWebServerApplicationContext : Root WebApplicationContext: initialization completed in 867 ms
-2019-10-04 00:46:47.959 - INFO  [           main] c.m.d.l.SLF4JLogger            : Cluster created with settings {hosts=[134.175.199.68:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
-2019-10-04 00:46:48.236 - INFO  [75.199.68:27017] c.m.d.l.SLF4JLogger            : Opened connection [connectionId{localValue:1, serverValue:200}] to 134.175.199.68:27017
-2019-10-04 00:46:48.300 - INFO  [75.199.68:27017] c.m.d.l.SLF4JLogger            : Monitor thread successfully connected to server with description ServerDescription{address=134.175.199.68:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[4, 2, 0]}, minWireVersion=0, maxWireVersion=8, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=62379711}
-2019-10-04 00:46:48.317 - INFO  [           main] c.ExecutorConfigurationSupport : Initializing ExecutorService 'applicationTaskExecutor'
-2019-10-04 00:46:48.410 - INFO  [           main] o.a.j.l.DirectJDKLog           : Starting ProtocolHandler ["http-nio-8080"]
-2019-10-04 00:46:48.428 - INFO  [           main] o.s.b.w.e.t.TomcatWebServer    : Tomcat started on port(s): 8080 (http) with context path ''
-2019-10-04 00:46:48.431 - INFO  [           main] o.s.b.StartupInfoLogger        : Started FinanceApplication in 2.428 seconds (JVM running for 3.557)
-2019-10-04 00:46:58.750 - INFO  [nio-8080-exec-1] o.a.j.l.DirectJDKLog           : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2019-10-04 00:46:58.750 - INFO  [nio-8080-exec-1] o.s.w.s.FrameworkServlet       : Initializing Servlet 'dispatcherServlet'
-2019-10-04 00:46:58.754 - INFO  [nio-8080-exec-1] o.s.w.s.FrameworkServlet       : Completed initialization in 4 ms
-2019-10-04 00:46:59.179 - INFO  [nio-8080-exec-1] c.m.d.l.SLF4JLogger            : Opened connection [connectionId{localValue:2, serverValue:201}] to 134.175.199.68:27017
+2019-10-05 00:29:14.638 - INFO  [           main] o.s.b.StartupInfoLogger        : Starting FinanceApplication on DESKTOP-4N7PR7S with PID 18728 (C:\Project\GitData\data\target\classes started by yuanzhifeng in C:\Project\GitData\data)
+2019-10-05 00:29:14.650 - INFO  [           main] o.s.b.SpringApplication        : No active profile set, falling back to default profiles: default
+2019-10-05 00:29:15.032 - INFO  [           main] epositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-10-05 00:29:15.088 - INFO  [           main] epositoryConfigurationDelegate : Finished Spring Data repository scanning in 54ms. Found 5 repository interfaces.
+2019-10-05 00:29:15.395 - INFO  [           main] o.s.b.w.e.t.TomcatWebServer    : Tomcat initialized with port(s): 8080 (http)
+2019-10-05 00:29:15.405 - INFO  [           main] o.a.j.l.DirectJDKLog           : Initializing ProtocolHandler ["http-nio-8080"]
+2019-10-05 00:29:15.411 - INFO  [           main] o.a.j.l.DirectJDKLog           : Starting service [Tomcat]
+2019-10-05 00:29:15.413 - INFO  [           main] o.a.j.l.DirectJDKLog           : Starting Servlet engine: [Apache Tomcat/9.0.24]
+2019-10-05 00:29:15.483 - INFO  [           main] o.a.j.l.DirectJDKLog           : Initializing Spring embedded WebApplicationContext
+2019-10-05 00:29:15.483 - INFO  [           main] letWebServerApplicationContext : Root WebApplicationContext: initialization completed in 805 ms
+2019-10-05 00:29:16.086 - INFO  [           main] c.m.d.l.SLF4JLogger            : Cluster created with settings {hosts=[134.175.199.68:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2019-10-05 00:29:16.286 - INFO  [75.199.68:27017] c.m.d.l.SLF4JLogger            : Opened connection [connectionId{localValue:1, serverValue:229}] to 134.175.199.68:27017
+2019-10-05 00:29:16.326 - INFO  [75.199.68:27017] c.m.d.l.SLF4JLogger            : Monitor thread successfully connected to server with description ServerDescription{address=134.175.199.68:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[4, 2, 0]}, minWireVersion=0, maxWireVersion=8, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=39025083}
+2019-10-05 00:29:16.453 - INFO  [           main] c.ExecutorConfigurationSupport : Initializing ExecutorService 'applicationTaskExecutor'
+2019-10-05 00:29:16.549 - INFO  [           main] o.a.j.l.DirectJDKLog           : Starting ProtocolHandler ["http-nio-8080"]
+2019-10-05 00:29:16.566 - INFO  [           main] o.s.b.w.e.t.TomcatWebServer    : Tomcat started on port(s): 8080 (http) with context path ''
+2019-10-05 00:29:16.567 - INFO  [           main] o.s.b.StartupInfoLogger        : Started FinanceApplication in 2.318 seconds (JVM running for 3.433)
+2019-10-05 00:29:22.767 - INFO  [nio-8080-exec-1] o.a.j.l.DirectJDKLog           : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-10-05 00:29:22.768 - INFO  [nio-8080-exec-1] o.s.w.s.FrameworkServlet       : Initializing Servlet 'dispatcherServlet'
+2019-10-05 00:29:22.773 - INFO  [nio-8080-exec-1] o.s.w.s.FrameworkServlet       : Completed initialization in 5 ms
+2019-10-05 00:29:23.180 - INFO  [nio-8080-exec-1] c.m.d.l.SLF4JLogger            : Opened connection [connectionId{localValue:2, serverValue:230}] to 134.175.199.68:27017
