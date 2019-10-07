@@ -29,5 +29,13 @@ public class EntAccountBookDetServiceImpl implements EntAccountBookDetService {
         return 1;
     }
 
+    @Override
+    public EntAccountBookDet findEntAccountBookDetBySysEntAccountBookDetID(String sysEntAccountBookDetID) {
+        Query query=new Query();
+        Criteria criteria=new Criteria();
+        criteria.and("SysEntAccountBookDetID").is(sysEntAccountBookDetID);
+        query.addCriteria(criteria);
+        return mongoTemplate.findOne(query,EntAccountBookDet.class);
+    }
 
 }

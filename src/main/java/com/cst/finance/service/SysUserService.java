@@ -14,4 +14,6 @@ public interface SysUserService {
 
     List<SysUser> findSysUserByName(String userName);
 
+    List<SysUser> findSysUserByUserNameAndUserPwd(SysUser sysUser);
+
 }

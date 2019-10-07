@@ -9,6 +9,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.List;
+
 @RestController
 @RequestMapping("/sysuser")
 public class SysUserController {
@@ -20,6 +22,12 @@ public class SysUserController {
     private SysUser create(@RequestBody String param){
         SysUser sysUser= JSONArray.parseObject(param,SysUser.class);
         return sysUserService.addSysUser(sysUser);
+    }
+
+    @PostMapping("/login")
+    private List<SysUser> login(@RequestBody String param){
+        List<SysUser> sysUsers=JSONArray.parseArray(param,SysUser.class);
+        return sysUserService.findSysUserByUserNameAndUserPwd(sysUsers.get(0));
     }
 
 }

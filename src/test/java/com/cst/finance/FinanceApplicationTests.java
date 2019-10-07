@@ -25,8 +25,8 @@ public class FinanceApplicationTests {
 
     public void addSysUser(){
         SysUser sysUser=new SysUser();
-        sysUser.setUsername("yuan");
-        sysUser.setUserpwd("100527");
+        sysUser.setUserName("yuan");
+        sysUser.setUserPwd("100527");
         sysUser.setRegisterTime(new Date());
 
         sysUserService.addSysUser(sysUser);
@@ -48,7 +48,7 @@ public class FinanceApplicationTests {
         List<SysUser> sysUserList=sysUserService.findSysUserByName("g");
         for (SysUser i:sysUserList
              ) {
-            System.out.println(i.getUsername()+"----"+i.getUserpwd());
+            System.out.println(i.getUserName()+"----"+i.getUserPwd());
         }
     }
 

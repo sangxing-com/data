@@ -8,4 +8,6 @@ public interface EntAccountBookDetService {
 
     int delEntAccountBookDet(String sysEntAccountBookDetID);
 
+    EntAccountBookDet findEntAccountBookDetBySysEntAccountBookDetID(String sysEntAccountBookDetID);
+
 }

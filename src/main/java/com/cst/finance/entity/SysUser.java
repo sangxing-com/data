@@ -14,12 +14,16 @@ public class SysUser implements Serializable {
 
     @Id
     private String id;
+    @Field("UserId")
+    private String UserId;
     @Field("UserName")
-    private String username;
+    private String UserName;
     @Field("UserPwd")
-    private String userpwd;
+    private String UserPwd;
+    @Field("UserTel")
+    private String UserTel;
     @Field("RegisterTime")
-    private Date registerTime;
+    private Date RegisterTime;
 
     public String getId() {
         return id;
@@ -29,27 +33,43 @@ public class SysUser implements Serializable {
         this.id = id;
     }
 
-    public String getUsername() {
-        return username;
+    public String getUserId() {
+        return UserId;
     }
 
-    public void setUsername(String username) {
-        this.username = username;
+    public void setUserId(String userId) {
+        UserId = userId;
     }
 
-    public String getUserpwd() {
-        return userpwd;
+    public String getUserName() {
+        return UserName;
     }
 
-    public void setUserpwd(String userpwd) {
-        this.userpwd = userpwd;
+    public void setUserName(String userName) {
+        UserName = userName;
+    }
+
+    public String getUserPwd() {
+        return UserPwd;
+    }
+
+    public void setUserPwd(String userPwd) {
+        UserPwd = userPwd;
+    }
+
+    public String getUserTel() {
+        return UserTel;
+    }
+
+    public void setUserTel(String userTel) {
+        UserTel = userTel;
     }
 
     public Date getRegisterTime() {
-        return registerTime;
+        return RegisterTime;
     }
 
     public void setRegisterTime(Date registerTime) {
-        this.registerTime = registerTime;
+        RegisterTime = registerTime;
     }
 }

@@ -9,4 +9,6 @@ public interface EntImportDataService {
     int addEntImportDatas(List<EntImportData> entImportDatas);
 
     int delEntImportDatas(String SysEntAccountBookDetID);
+
+    List<EntImportData> findEntImportDataBySysEntAccountBookDetIDAndMonthNo(EntImportData entImportData);
 }

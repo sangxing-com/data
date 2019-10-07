@@ -2,6 +2,7 @@ package com.cst.finance.service;
 
 import com.cst.finance.dao.SysUserDao;
 import com.cst.finance.entity.SysUser;
+import com.cst.finance.utils.CommonUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.data.mongodb.core.query.Criteria;
@@ -26,9 +27,9 @@ public class SysUserServiceImpl implements SysUserService {
 
     @Override
     public SysUser addSysUser(SysUser sysUser) {
-      //  mongoTemplate.save(sysUser);
+        if(sysUser.getUserId()==null)
+            sysUser.setUserId(CommonUtils.getUUID());
         return mongoTemplate.save(sysUser,"SysUser");
-        //return sysUserDao.save(sysUser);
     }
 
     @Override
@@ -64,7 +65,15 @@ public class SysUserServiceImpl implements SysUserService {
         criteria.and("UserName").regex(userName);
         query.addCriteria(criteria);
         return mongoTemplate.find(query,SysUser.class);
+    }
 
-
+    @Override
+    public List<SysUser> findSysUserByUserNameAndUserPwd(SysUser sysUser) {
+        Query query=new Query();
+        Criteria criteria=new Criteria();
+        criteria.and("UserTel").is(sysUser.getUserTel());
+        criteria.and("UserPwd").is(sysUser.getUserPwd());
+        query.addCriteria(criteria);
+        return mongoTemplate.find(query,SysUser.class);
     }
 }

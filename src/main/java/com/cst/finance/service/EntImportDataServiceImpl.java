@@ -45,4 +45,14 @@ public class EntImportDataServiceImpl implements EntImportDataService {
         }
         return 0;
     }
+
+    @Override
+    public List<EntImportData> findEntImportDataBySysEntAccountBookDetIDAndMonthNo(EntImportData entImportData) {
+        Query query=new Query();
+        Criteria criteria=new Criteria();
+        criteria.and("SysEntAccountBookDetID").is(entImportData.getSysEntAccountBookDetID());
+        criteria.and("MonthNo").is(entImportData.getMonthNo());
+        query.addCriteria(criteria);
+        return mongoTemplate.find(query,EntImportData.class);
+    }
 }
