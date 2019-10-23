@@ -76,4 +76,10 @@ public class SysUserServiceImpl implements SysUserService {
         query.addCriteria(criteria);
         return mongoTemplate.find(query,SysUser.class);
     }
+
+    @Override
+    public List<SysUser> findSysUser() {
+        Query query=new Query();
+        return mongoTemplate.find(query,SysUser.class);
+    }
 }

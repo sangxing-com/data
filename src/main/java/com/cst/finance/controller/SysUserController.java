@@ -27,6 +27,7 @@ public class SysUserController {
     @PostMapping("/login")
     private List<SysUser> login(@RequestBody String param){
         List<SysUser> sysUsers=JSONArray.parseArray(param,SysUser.class);
+        List<SysUser> sysUsers1=sysUserService.findSysUserByUserNameAndUserPwd(sysUsers.get(0));
         return sysUserService.findSysUserByUserNameAndUserPwd(sysUsers.get(0));
     }
 

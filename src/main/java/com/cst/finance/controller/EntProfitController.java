@@ -6,6 +6,7 @@ import com.cst.finance.module.ParametersMod;
 import com.cst.finance.service.EntProfitService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -22,6 +23,12 @@ public class EntProfitController {
     private int create(ParametersMod param){
         List<EntProfit> entProfits= JSONArray.parseArray(param.getDataJson(),EntProfit.class);
         return entProfitService.addEntProfits(entProfits);
+    }
+
+    @PostMapping("/findall")
+    private List<EntProfit> findall(@RequestBody String param){
+        List<EntProfit> entProfits=JSONArray.parseArray(param,EntProfit.class);
+        return entProfitService.findEntProfitBySysEntAccountBookDetIDAndMonthNo(entProfits.get(0));
     }
 
 }

@@ -1,0 +1,50 @@
+2019-10-13 14:41:12.797 - INFO  [           main] egate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$ed1923d8] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-10-13 14:41:13.303 - INFO  [           main] o.s.b.SpringApplication        : No active profile set, falling back to default profiles: default
+2019-10-13 14:41:13.664 - INFO  [           main] epositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-10-13 14:41:13.739 - INFO  [           main] epositoryConfigurationDelegate : Finished Spring Data repository scanning in 72ms. Found 9 repository interfaces.
+2019-10-13 14:41:13.876 - INFO  [           main] o.s.c.c.s.GenericScope         : BeanFactory id=d295f018-33b8-35d5-8310-0d6095c52f02
+2019-10-13 14:41:13.935 - INFO  [           main] egate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$ed1923d8] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-10-13 14:41:14.101 - INFO  [           main] o.s.b.w.e.t.TomcatWebServer    : Tomcat initialized with port(s): 8012 (http)
+2019-10-13 14:41:14.113 - INFO  [           main] o.a.j.l.DirectJDKLog           : Initializing ProtocolHandler ["http-nio-8012"]
+2019-10-13 14:41:14.120 - INFO  [           main] o.a.j.l.DirectJDKLog           : Starting service [Tomcat]
+2019-10-13 14:41:14.121 - INFO  [           main] o.a.j.l.DirectJDKLog           : Starting Servlet engine: [Apache Tomcat/9.0.24]
+2019-10-13 14:41:14.296 - INFO  [           main] o.a.j.l.DirectJDKLog           : Initializing Spring embedded WebApplicationContext
+2019-10-13 14:41:14.296 - INFO  [           main] letWebServerApplicationContext : Root WebApplicationContext: initialization completed in 986 ms
+2019-10-13 14:41:14.883 - INFO  [           main] c.m.d.l.SLF4JLogger            : Cluster created with settings {hosts=[134.175.199.68:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2019-10-13 14:41:15.084 - INFO  [75.199.68:27017] c.m.d.l.SLF4JLogger            : Opened connection [connectionId{localValue:1, serverValue:989}] to 134.175.199.68:27017
+2019-10-13 14:41:15.121 - INFO  [75.199.68:27017] c.m.d.l.SLF4JLogger            : Monitor thread successfully connected to server with description ServerDescription{address=134.175.199.68:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[4, 2, 0]}, minWireVersion=0, maxWireVersion=8, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=36607972}
+2019-10-13 14:41:15.241 - WARN  [           main] c.n.c.s.URLConfigurationSource : No URLs will be polled as dynamic configuration sources.
+2019-10-13 14:41:15.241 - INFO  [           main] c.n.c.s.URLConfigurationSource : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2019-10-13 14:41:15.244 - WARN  [           main] c.n.c.s.URLConfigurationSource : No URLs will be polled as dynamic configuration sources.
+2019-10-13 14:41:15.244 - INFO  [           main] c.n.c.s.URLConfigurationSource : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2019-10-13 14:41:15.385 - INFO  [           main] c.ExecutorConfigurationSupport : Initializing ExecutorService 'applicationTaskExecutor'
+2019-10-13 14:41:15.444 - INFO  [           main] .w.s.WelcomePageHandlerMapping : Adding welcome page: class path resource [static/index.html]
+2019-10-13 14:41:16.073 - INFO  [           main] o.s.c.n.e.InstanceInfoFactory  : Setting initial instance status as: STARTING
+2019-10-13 14:41:16.098 - INFO  [           main] c.n.d.DiscoveryClient          : Initializing Eureka in region us-east-1
+2019-10-13 14:41:16.144 - INFO  [           main] .n.d.p.DiscoveryJerseyProvider : Using JSON encoding codec LegacyJacksonJson
+2019-10-13 14:41:16.144 - INFO  [           main] .n.d.p.DiscoveryJerseyProvider : Using JSON decoding codec LegacyJacksonJson
+2019-10-13 14:41:16.223 - INFO  [           main] .n.d.p.DiscoveryJerseyProvider : Using XML encoding codec XStreamXml
+2019-10-13 14:41:16.224 - INFO  [           main] .n.d.p.DiscoveryJerseyProvider : Using XML decoding codec XStreamXml
+2019-10-13 14:41:16.387 - INFO  [           main] .d.s.r.a.ConfigClusterResolver : Resolving eureka endpoints via configuration
+2019-10-13 14:41:16.549 - INFO  [           main] c.n.d.DiscoveryClient          : Disable delta property : false
+2019-10-13 14:41:16.550 - INFO  [           main] c.n.d.DiscoveryClient          : Single vip registry refresh property : null
+2019-10-13 14:41:16.550 - INFO  [           main] c.n.d.DiscoveryClient          : Force full registry fetch : false
+2019-10-13 14:41:16.550 - INFO  [           main] c.n.d.DiscoveryClient          : Application is null : false
+2019-10-13 14:41:16.550 - INFO  [           main] c.n.d.DiscoveryClient          : Registered Applications size is zero : true
+2019-10-13 14:41:16.550 - INFO  [           main] c.n.d.DiscoveryClient          : Application version is -1: true
+2019-10-13 14:41:16.551 - INFO  [           main] c.n.d.DiscoveryClient          : Getting all instance registry info from the eureka server
+2019-10-13 14:41:16.778 - INFO  [           main] c.n.d.DiscoveryClient          : The response status is 200
+2019-10-13 14:41:16.780 - INFO  [           main] c.n.d.DiscoveryClient          : Starting heartbeat executor: renew interval is: 30
+2019-10-13 14:41:16.782 - INFO  [           main] c.n.d.InstanceInfoReplicator   : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2019-10-13 14:41:16.787 - INFO  [           main] c.n.d.DiscoveryClient          : Discovery Client initialized at timestamp 1570948876784 with initial instances count: 3
+2019-10-13 14:41:16.788 - INFO  [           main] .c.n.e.s.EurekaServiceRegistry : Registering application FINANCE-SERVER with eureka with status UP
+2019-10-13 14:41:16.789 - INFO  [           main] c.n.d.DiscoveryClient$3        : Saw local status change event StatusChangeEvent [timestamp=1570948876789, current=UP, previous=STARTING]
+2019-10-13 14:41:16.791 - INFO  [nfoReplicator-0] c.n.d.DiscoveryClient          : DiscoveryClient_FINANCE-SERVER/134.175.199.68:8012: registering service...
+2019-10-13 14:41:16.803 - INFO  [           main] o.a.j.l.DirectJDKLog           : Starting ProtocolHandler ["http-nio-8012"]
+2019-10-13 14:41:16.827 - INFO  [           main] o.s.b.w.e.t.TomcatWebServer    : Tomcat started on port(s): 8012 (http) with context path ''
+2019-10-13 14:41:16.828 - INFO  [           main] .EurekaAutoServiceRegistration : Updating port to 8012
+2019-10-13 14:41:16.829 - INFO  [           main] o.s.b.StartupInfoLogger        : Started FinanceApplication in 4.866 seconds (JVM running for 6.088)
+2019-10-13 14:41:16.878 - INFO  [nfoReplicator-0] c.n.d.DiscoveryClient          : DiscoveryClient_FINANCE-SERVER/134.175.199.68:8012 - registration status: 204
+2019-10-13 14:41:38.063 - INFO  [nio-8012-exec-1] o.a.j.l.DirectJDKLog           : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-10-13 14:41:38.064 - INFO  [nio-8012-exec-1] o.s.w.s.FrameworkServlet       : Initializing Servlet 'dispatcherServlet'
+2019-10-13 14:41:38.071 - INFO  [nio-8012-exec-1] o.s.w.s.FrameworkServlet       : Completed initialization in 7 ms

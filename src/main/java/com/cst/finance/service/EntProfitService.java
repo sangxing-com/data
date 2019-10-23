@@ -9,4 +9,6 @@ public interface EntProfitService {
     int addEntProfits(List<EntProfit> entProfits);
 
     int delEntProfits(String SysEntAccountBookDetID);
+
+    List<EntProfit> findEntProfitBySysEntAccountBookDetIDAndMonthNo(EntProfit entProfit);
 }

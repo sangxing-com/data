@@ -16,4 +16,6 @@ public interface SysUserService {
 
     List<SysUser> findSysUserByUserNameAndUserPwd(SysUser sysUser);
 
+    List<SysUser> findSysUser();
+
 }

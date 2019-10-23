@@ -7,6 +7,21 @@ import java.util.regex.Pattern;
 public class CommonUtils {
 
     /**
+     * NULL和空判断
+     * @param value
+     * @return
+     */
+    public static Boolean NullOrEmpty(String value){
+        if (value==null){
+            return true;
+        }else if("".equals(value)){
+            return true;
+        }else {
+            return false;
+        }
+    }
+
+    /**
      * 获取UUID
      * @return
      */

@@ -1,6 +1,23 @@
+server:
+  port: 8081
+eureka:
+  instance:
+    hostname: 134.175.199.68
+    prefer-ip-address: true
+    instance-id: ${eureka.instance.hostname}:${server.port}
+  client:
+    service-url:
+      defaultZone: http://134.175.199.68:8761/eureka/
 spring:
+  application:
+    name: finance-server
   data:
     mongodb:
-      uri: mongodb://root:100527@134.175.199.68:27017/finance
+      uri: mongodb://root:100527@134.175.199.68:27017/remote
 logging:
   config: classpath:log4j2.yml
+tushare:
+  serverurl: http://api.waditu.com
+  token: fb70b6a8db7310a7ef7938a43dbd7b15beb021685cfe21267858f4c5
+uploadfile:
+  path: static/images/upload/

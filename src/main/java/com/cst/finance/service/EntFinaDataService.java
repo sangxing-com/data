@@ -9,4 +9,6 @@ public interface EntFinaDataService {
     int addEntFinaDatas(List<EntFinaData> entFinaDatas);
 
     int delEntFinaDatas(String SysEntAccountBookDetID);
+
+    List<EntFinaData> findEntFinaDataBySysEntAccountBookDetIDAndMonthNo(EntFinaData entFinaData);
 }

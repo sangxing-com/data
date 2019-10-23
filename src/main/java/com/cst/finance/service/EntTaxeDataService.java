@@ -9,4 +9,6 @@ public interface EntTaxeDataService {
     int addEntTaxeDatas(List<EntTaxeData> entTaxeDatas);
 
     int delEntTaxeDatas(String SysEntAccountBookDetID);
+
+    List<EntTaxeData> findEntTaxeDataBySysEntAccountBookDetIDAndMonthNo(EntTaxeData entTaxeData);
 }

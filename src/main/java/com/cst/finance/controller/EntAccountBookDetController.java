@@ -23,4 +23,10 @@ public class EntAccountBookDetController {
         return entAccountBookDetService.addEntAccountBookDet(entAccountBookDet);
     }
 
+    @PostMapping("/delall")
+    private int delall(ParametersMod param){
+        EntAccountBookDet entAccountBookDet= JSONArray.parseObject(param.getDataJson(),EntAccountBookDet.class);
+        return entAccountBookDetService.delAllEntAccountBookDet(entAccountBookDet.getSysEntAccountBookDetID());
+    }
+
 }

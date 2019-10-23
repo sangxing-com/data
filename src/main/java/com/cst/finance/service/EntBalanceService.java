@@ -9,4 +9,6 @@ public interface EntBalanceService {
     int addEntBalances(List<EntBalance> entBalances);
 
     int delEntBalances(String SysEntAccountBookDetID);
+
+    List<EntBalance> findEntBalanceBySysEntAccountBookDetIDAndMonthNo(EntBalance entBalance);
 }

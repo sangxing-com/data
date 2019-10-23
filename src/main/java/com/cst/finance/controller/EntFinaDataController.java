@@ -6,6 +6,7 @@ import com.cst.finance.module.ParametersMod;
 import com.cst.finance.service.EntFinaDataService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -22,5 +23,11 @@ public class EntFinaDataController {
     private int create(ParametersMod param){
         List<EntFinaData> entFinaData= JSONArray.parseArray(param.getDataJson(),EntFinaData.class);
         return entFinaDataService.addEntFinaDatas(entFinaData);
+    }
+
+    @PostMapping("/findall")
+    private List<EntFinaData> findall(@RequestBody String param){
+        List<EntFinaData> entFinaDatas=JSONArray.parseArray(param,EntFinaData.class);
+        return entFinaDataService.findEntFinaDataBySysEntAccountBookDetIDAndMonthNo(entFinaDatas.get(0));
     }
 }

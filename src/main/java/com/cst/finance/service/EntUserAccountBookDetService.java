@@ -8,5 +8,11 @@ public interface EntUserAccountBookDetService {
 
     EntUserAccountBookDet addEntUserAccountBookDet(EntUserAccountBookDet entUserAccountBookDet);
 
+    int delEntUserAccountBookDet(String SysEntAccountBookDetID);
+
+    int delEntUserAccountBookDetBySysEntAccountBookDetIDAndUserId(String UserId,String SysEntAccountBookDetID);
+
     List<EntUserAccountBookDet> findEntUserAccountBookDetByUserId(String userId);
+
+
 }

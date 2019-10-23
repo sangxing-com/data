@@ -2,6 +2,8 @@ package com.cst.finance.service;
 
 import com.cst.finance.dao.EntImportDataDao;
 import com.cst.finance.entity.EntImportData;
+import com.cst.finance.utils.LogUtils;
+import org.slf4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.data.mongodb.core.query.Criteria;
@@ -18,6 +20,8 @@ public class EntImportDataServiceImpl implements EntImportDataService {
 
     @Autowired
     MongoTemplate mongoTemplate;
+
+    Logger log = LogUtils.getExceptionLogger();
 
     @Override
     public int addEntImportDatas(List<EntImportData> entImportDatas) {
@@ -40,10 +44,12 @@ public class EntImportDataServiceImpl implements EntImportDataService {
             criteria.and("SysEntAccountBookDetID").is(SysEntAccountBookDetID);
             query.addCriteria(criteria);
             mongoTemplate.remove(query,EntImportData.class);
+            log.info("===========================================>delEntImportDatas class EntImportDatas delete success");
+            return 1;
         }catch (Exception ce){
+            log.info("===========================================>delEntImportDatas class EntImportDatas delete faile:"+ce.toString());
             return 0;
         }
-        return 0;
     }
 
     @Override

@@ -6,6 +6,7 @@ import com.cst.finance.module.ParametersMod;
 import com.cst.finance.service.EntTaxeDataService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -22,5 +23,11 @@ public class EntTaxeDataController {
     private int create(ParametersMod param){
         List<EntTaxeData> entTaxeDatas= JSONArray.parseArray(param.getDataJson(),EntTaxeData.class);
         return entTaxeDataService.addEntTaxeDatas(entTaxeDatas);
+    }
+
+    @PostMapping("/findall")
+    private List<EntTaxeData> findall(@RequestBody String param){
+        List<EntTaxeData> entTaxeDatas=JSONArray.parseArray(param,EntTaxeData.class);
+        return entTaxeDataService.findEntTaxeDataBySysEntAccountBookDetIDAndMonthNo(entTaxeDatas.get(0));
     }
 }
